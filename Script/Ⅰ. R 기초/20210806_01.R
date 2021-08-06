@@ -1,6 +1,6 @@
 #2021.08.06. FRI
 #Data_Analytics_With_R
-
+ 
 ## CH.08 데이터 유형 알아보기. 
 #08.1 문자(Character)
 chr <- "Data Analytics With R"
