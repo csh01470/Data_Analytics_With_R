@@ -9,6 +9,9 @@ chr <- "Data Analytics With R"
 num_Realnumber <- 3
 num_integer <- 3L
 
+#PLUS) 복소수
+#SKIP
+
 #08.3. 논리(Logical)
 logical_01 <- TRUE
 logical_02 <- true
@@ -19,3 +22,6 @@ factor <- factor(x = gender,
                  levels = c("f","m"),
                  labels = c("female","male"),
                  ordered = FALSE)                    # 남자와 여자의 구분은 우위가 없으므로 명목형임
+
+#08.5. 날짜(Date)
+#SKIP
