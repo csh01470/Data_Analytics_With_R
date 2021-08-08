@@ -1,4 +1,4 @@
-#2021.08.06. FRI
+#2021.08.08. SUN
 #Data_Analytics_With_R
 
 ## CH.11 R의 기본 함수 파악하기
@@ -16,6 +16,10 @@ mean(vector_01)
 
 #(4) 중위수 함수
 median(vector_01)
+
+#PLUS) 최빈값 함수
+vector_02 <- c(1, 2, 3, 4, 4, 5, 5, 5)
+names(which(table(vector_02) == max(table(vector_02))))
 
 #(5) 분산 함수
 var(vector_01)
@@ -43,19 +47,19 @@ exp(vector_01)
 log(vector_01)
 
 #11.3. 소수점 처리 함수
-vector_02 <- c(1.25, 3.33, 5.47, 7.818590, 9.98910)
+vector_03 <- c(1.25, 3.33, 5.47, 7.818590, 9.98910)
 
 #(1) 반올림 함수
-round(vector_02, 1)
+round(vector_03, 1)
 
 #PLUS) digits 파라미터에 음수값을 할당할 경우
-round(vector_02, -1)
+round(vector_03, -1)
 
 #(2) 올림 함수
-ceiling(vector_02)
+ceiling(vector_03)
 
 #(3) 내림 함수
-floor(vector_02)
+floor(vector_03)
 
 #11.3. 순차, 반복 데이터 생성 함수
 #(1) n:m
