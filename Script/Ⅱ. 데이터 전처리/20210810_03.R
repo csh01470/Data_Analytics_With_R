@@ -30,19 +30,19 @@ is.factor(student_dataset$gender)
 #(1) is.atomic()
 is.atomic('Data_Analytics_With_R')
 
-#(1) is.vector()
+#(2) is.vector()
 is.vector(student_dataset$name)
 
-#(2) is.matrix()
+#(3) is.matrix()
 is.matrix(student_dataset)
 
-#(3) is.data.frame()
+#(4) is.data.frame()
 is.data.frame(student_dataset)
 
-#(4) is.array()
+#(5) is.array()
 is.array(student_dataset)
 
-#(5) is.list()
+#(6) is.list()
 is.list(student_dataset)
 
 #PLUS. class() 함수, mode() 함수와 typeof() 함수에 대한 논의
