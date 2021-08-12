@@ -6,9 +6,9 @@
 #(1) 산술 연산자의 종류
 #SKIP
 
-#(2) 벡터 간 길이가 다를 때 각 원소들을 연산할 경우
-vector_01 <- c(1,2,3,4)
-vector_02 <- c(1,2)
+#(2) 벡터 간 길이가 다를 경우 벡터 연산 확인하기
+vector_01 <- c(1, 2, 3, 4)
+vector_02 <- c(1, 2)
 vector_01+vector_02
 vector_01-vector_02
 vector_01*vector_02
