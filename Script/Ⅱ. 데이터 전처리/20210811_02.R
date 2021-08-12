@@ -41,5 +41,3 @@ subset(student_dataset, test_pass == TRUE & korean < 80 )
 
 #(4) 여러 조건 중 한 조건 이상을 충족하게 필터링하기
 subset(student_dataset, test_pass == FALSE | math < 70)
-
-subset(student_dataset, test_pass == FALSE | math < 70)
