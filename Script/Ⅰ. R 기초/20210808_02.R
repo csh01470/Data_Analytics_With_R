@@ -61,7 +61,7 @@ det(matrix_01)
 
 #(6) 역행렬(Inverse Matrix)
 solve(matrix_01) #WHY?
-matrix_02 <- matrix(data = c(1,0,1,2,3,0,1,3,0),
+matrix_02 <- matrix(data = c(1, 0, 1, 2, 3, 0, 1, 3, 0),
                   nrow=3,
                   byrow = TRUE)
 solve(matrix_02)
