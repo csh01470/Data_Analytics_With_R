@@ -8,7 +8,7 @@ student_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
                               gender = factor(c('m', 'f', 'm', 'f', 'm')),
                               korean = c(35, 92.5, 70, 85, 60),
                               math = c(65L, 80L, 88L, 67L, 28L),
-                              test_pass = c(FALSE,TRUE,TRUE,TRUE,FALSE))
+                              test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
 
 #(2) 비교 연산자를 통해 필터링하기.
 #①시험에 통과하지 못한 학생을 필터링할 경우
