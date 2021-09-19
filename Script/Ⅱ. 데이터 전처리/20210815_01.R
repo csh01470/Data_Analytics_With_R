@@ -7,7 +7,7 @@ student_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
                               gender = factor(c('m', 'f', 'm', 'f', 'm')),
                               korean = c(35, 92.5, 70, 85, 60),
                               math = c(65L, 80L, 88L, 67L, 28L),
-                              test_pass = c(FALSE,TRUE,TRUE,TRUE,FALSE))
+                              test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
 
 #(1) 전체 열 이름 변경하기
 colnames(student_dataset) <- c('name', 'SEX', 'korean', 'math', 'test_pass')
