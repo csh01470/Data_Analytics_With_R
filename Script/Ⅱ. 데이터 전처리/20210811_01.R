@@ -15,7 +15,7 @@ vector_01[-3]
 vector_01[1:3] #same vector_01[c(1,2,3)]
 
 #20.2. 행렬 부분 선택
-matrix_01 <- matrix(data = c(1,2,3,4,5,6,7,8,9),
+matrix_01 <- matrix(data = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
                     nrow = 3,
                     byrow = TRUE)
 
@@ -40,7 +40,7 @@ student_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
 student_dataset[1, 4]
 
 #(2) 슬라이싱하기
-student_dataset[1,]
+student_dataset[1, ]
 
 #PLUS) 데이터프레임 열 인덱싱 $
 student_dataset$math
