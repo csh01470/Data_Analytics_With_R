@@ -3,7 +3,7 @@
  
 ## CH.20 데이터셋 부분 선택하기
 #20.1. 벡터 부분 선택
-vector_01 <- c(1,2,3,4,5)
+vector_01 <- c(1, 2, 3, 4, 5)
 
 #(1) 인덱싱하기
 vector_01[3]
@@ -34,7 +34,7 @@ student_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
                               gender = factor(c('m', 'f', 'm', 'f', 'm')),
                               korean = c(35, 92.5, 70, 85, 60),
                               math = c(65L, 80L, 88L, 67L, 28L),
-                              test_pass = c(FALSE,TRUE,TRUE,TRUE,FALSE))
+                              test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
 
 #(1) 인덱싱하기
 student_dataset[1, 4]
@@ -49,14 +49,14 @@ student_dataset$math
 student_dataset[[4]]
 
 #20.4. 배열 부분 선택
-array_01 <- array(1:18, dim=c(3,3,2))
+array_01 <- array(1:18, dim=c(3, 3, 2))
 array_01
 
 #(1) 인덱싱하기
 array_01[3, 1, 2]
 
 #(2) 부분선택하기
-array_01[c(1,3), 2, 1]
+array_01[c(1, 3), 2, 1]
 
 #20.5. 리스트 부분 선택 1, []
 list_01 <- list(obj_01 = vector_01,
@@ -82,4 +82,4 @@ list_01[[3]]
 list_01[[3]][2, 2]
 
 #(3) 객체 호출 후 슬라이싱하기
-list_01[[3]][3,]
+list_01[[3]][3, ]
