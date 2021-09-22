@@ -1,7 +1,7 @@
 #2021.09.19. SUN
 #Data_Analytics_With_R
 
-## CH.24 데이터셋 구조 변경하기 
+## CH.24 데이터셋 구조 변경하기
 #24.1. 데이터셋의 물리적 행 결합, rbind()
 class_01_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
                                gender = factor(c('m', 'f', 'm', 'f', 'm')),
@@ -23,4 +23,13 @@ class_info_dataset <- data.frame(
 student_dataset <- cbind(student_dataset, class_info_dataset)
 
 #24.2. 데이터셋의 논리적 결합, merge()
-?merge()
+#(1) merge() 함수의 구조
+#SKIP
+
+#(2) all 파라미터가 TRUE인 경우
+job_info_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'LSS', 'KSB'),
+                               job = c('WK', 'ST', 'ST', 'ST', 'WK'))
+student_dataset <- merge(student_dataset, job_info_dataset, by='name', all=TRUE)
+
+#(3) all 파라미터가 FALSE인 경우  
+student_dataset <- merge(student_dataset, job_info_dataset, by='name', all=FALSE)
