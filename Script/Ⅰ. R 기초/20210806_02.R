@@ -4,7 +4,9 @@
 ## CH.09 데이터 구조 파악하기
 #09.2. 데이터의 구조와 종류
 #(1) 스칼라(Scalar)
-#SKIP
+scalar_01 <- 8
+scalar_02 <- "Data"
+scalar_03 <- TRUE
 
 #(2) 벡터(Vector)
 vector_01 <- c(1, 3, 5, 7, 9)
