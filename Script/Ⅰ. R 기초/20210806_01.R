@@ -16,6 +16,9 @@ num_integer <- 3L
 logical_01 <- TRUE
 logical_02 <- true
 
+#PLUS) 특수값
+#SKIP
+
 #08.4. 팩터(Factor, 범주)
 gender <- c("f", "f", "m", 35, "f", TRUE, "F", "m", "m", "m") #"f", "m" 외에도 결측값 존재
 factor <- factor(x = gender,
