@@ -2,7 +2,7 @@
 #Data_Analytics_With_R
 
 ## CH.26 결측치 생성, 파악 및 처리하기 
-#26.1. 결측치(Not Available) 정의와 생성하기
+#26.1. 결측치(Missing Value) 정의와 생성하기
 #(1) 결측치 정의
 #SKIP
 
