@@ -43,6 +43,7 @@ russian_roulette <- function(player1, player2) {
 #16.4. 파일 입력, 출력에 대한 논의
 example_data <- read.csv('a:/R_project/Data_Analytics_With_R/Data/sampling_data_set.csv')
 example_data <- read.csv('Data/sampling_data_set.csv')
+example_data <- read.csv(file.choose())
 
 #16.5. 동적 변수 할당
 #SKIP
