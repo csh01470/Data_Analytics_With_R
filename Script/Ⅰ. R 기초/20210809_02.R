@@ -2,20 +2,40 @@
 #Data_Analytics_With_R
 
 ## CH.14 내부 데이터 저장하기
-#14.1. 데이터셋 저장하기.
-#(1) write.table()
+#14.1. 데이터셋 저장, write.table() 
+#(1) write.table() 함수의 구조와 파라미터
+#SKIP
+
+#(2) 예시
 write.table(asset_status, 
             file='asset_status.tsv',
             sep='\t',
             row.names = FALSE)
 
-#(2) write.csv()
+#14.2. 데이터셋 저장, write.csv()
+#(1) write.csv() 함수의 구조와 파라미터
+#SKIP 
+
+#(2) 예시
 write.csv(grade_list_01,
           file="grade_list.csv",
           row.names=F,
           quote=FALSE)  #"(큰따옴표) 수식 제거
 
-#14.2. 출력 결과 저장하기
+#14.3. 데이터셋 저장, write_xlsx()
+#(1) writexl 패키지 설치 및 활성화
+#install.packages('writexl')
+library(writexl)
+
+#(2) write_xlsx() 함수의 구조와 파라미터
+#SKIP
+
+#(3) 예시
+write_xlsx(x=grade_list_01,
+           path="grade_list.xlsx",
+           col_names=TRUE)
+
+#14.3. 출력 결과 저장
 #(1) cat()
 sampling_data <- sample(x=-100:100, size=15)
 cat("mean of sampling_data is as follow",
@@ -36,5 +56,5 @@ print("mean of sampling_data is as follow")
 mean(sampling_data)
 sink()                            #함수끝선언
 
-#14.3. 스크립트 저장하기
+#14.4. 스크립트 저장
 #SKIP
