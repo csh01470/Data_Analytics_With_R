@@ -1,7 +1,7 @@
 #2021.11.10. WED
 #Data_Analytics_With_R
 
-## CH.31. Tidyverse와 대표적인 패키지들
+## CH.31 Tidyverse와 대표적인 패키지들
 #31.1. 기존의 base 문법의 단점과 Tidyverse 등장 배경
 #(1) base 문법의 단점
 #SKIP
