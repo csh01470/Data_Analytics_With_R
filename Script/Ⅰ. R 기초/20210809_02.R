@@ -33,7 +33,8 @@ library(writexl)
 #(3) 예시
 write_xlsx(x=grade_list_01,
            path="grade_list.xlsx",
-           col_names=TRUE)
+           col_names=TRUE,
+           format_headers=FALSE)
 
 #14.3. 출력 결과 저장
 #(1) cat()
