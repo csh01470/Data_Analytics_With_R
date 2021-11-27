@@ -48,15 +48,26 @@ ts(data=1:12, start=2021, frequency = 4)
 ts(data=1:12, start=2021, frequency = 1)
 
 #28.5. 시계열 데이터의 연산
-Date_01 <- as.Date('2021/11/08')
+Date_01 <- as.Date('2020/11/08')
+Date_02 <- as.Date('2021/11/08')
+
 #(1) 덧셈
 Date_01 + 3
 
 #(2) 뺄셈
 Date_01 - 3 
+difftime('2021/11/25', Date_01)
+Date_01 - Date_02
 
 #28.6. 시계열 데이터 전처리
 #(1) weekdays()
 weekdays(Date_01)
 
-#(2) diff()
+#PLUS) 주, 휴일 구분하기
+ifelse()
+
+#(2) lag()
+
+
+#(3) diff()
+
