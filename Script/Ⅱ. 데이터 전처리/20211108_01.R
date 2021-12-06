@@ -52,22 +52,26 @@ Date_01 <- as.Date('2020/11/08')
 Date_02 <- as.Date('2021/11/08')
 
 #(1) 덧셈
-Date_01 + 3
+Date_01 + 365
+Date_01 + Date_02
 
 #(2) 뺄셈
-Date_01 - 3 
-difftime('2021/11/25', Date_01)
-Date_01 - Date_02
+Date_02 - 365 
+Date_02 - Date_01 
+difftime(Date_02, Date_01)
 
 #28.6. 시계열 데이터 전처리
 #(1) weekdays()
 weekdays(Date_01)
 
 #PLUS) 주, 휴일 구분하기
-ifelse()
+ifelse(weekdays(Date_01) == 'Sunday' | weekdays(Date_01) == 'Saturday', 
+       'Holiday', 
+       'Workday')
 
-#(2) lag()
-
-
-#(3) diff()
-
+#(2) 시차(Time Lag) 함수, lag()
+TSLA_raw <- read.csv('data/TSLA.csv')
+TSLA_close <- TSLA_raw[, c('Date', 'Close')]
+TSLA_close$Date <- as.Date(TSLA_close$Date)
+TSLA_close$Close_lag <- lag(x=TSLA_close$Close, k=1)
+TSLA_close$Close_diff <- TSLA_close$Close - TSLA_close$Close_lag
