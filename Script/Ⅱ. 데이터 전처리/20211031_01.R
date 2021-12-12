@@ -1,7 +1,7 @@
 #2021.10.31. SUN
 #Data_Analytics_With_R
 
-## CH.27 이상치 판단 및 전처리하기 
+## CH.27 이상치 판단 및 전처리하기
 #00-1. 시스템 옵션 설정하기. 
 options(scipen=100)
 
@@ -46,7 +46,3 @@ mpg$hwy <- ifelse(mpg$hwy > mean_hwy + 3 * sigma_hwy | mpg$hwy < mean_hwy - 3 * 
                   NA,
                   mpg$hwy)
 table(is.na(mpg$hwy))
-
-#PLUS) 정규성 파악
-shapiro.test(mpg_raw$hwy)
-hist(mpg_raw$hwy)
