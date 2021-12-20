@@ -29,6 +29,7 @@ sd(vector_01)
 
 #(7) 분위수 함수
 quantile(vector_01)
+quantile(vector_01, probs=0.33)
 
 #11.2. 기초 산술 함수
 #(1) 합계 함수, sum()
