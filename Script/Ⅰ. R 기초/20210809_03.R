@@ -27,7 +27,8 @@ switch(sample_01,
        "2" = print("two"),
        "3" = print("three"),
        "4" = print("four"),
-       "5" = print("five"))
+       "5" = print("five")
+)
 
 #15.2. 반복문
 #(1) for문
@@ -90,7 +91,7 @@ russian_roulette <- function(player1, player2) {
   repeat{
     if(player1_index == bullet_index){
       Sys.sleep(1)
-      cat("Tick! ", player1, " is dead.", "\n", sep="")
+      cat("Tang! ", player1, " is dead.", "\n", sep="")
       break
     }
     else{
@@ -99,7 +100,7 @@ russian_roulette <- function(player1, player2) {
       player1_index = sample(1:6,1)}
     if(player2_index == bullet_index){
       Sys.sleep(1)   
-      cat("Tick! ", player2, " is dead.", "\n", sep="")
+      cat("Tang! ", player2, " is dead.", "\n", sep="")
       break
     }
     else{
