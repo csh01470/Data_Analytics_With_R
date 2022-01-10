@@ -55,28 +55,27 @@ while(tanker_HP>0){
 }
 
 #(3) repeat문
-bullet_index  <- sample(1:6, 1) #총알의 위치값 설정
-player1_index <- sample(1:6, 1) #Player1이 격발할 총알 위치값 설정
-player2_index <- sample(1:6, 1) #Player2가 격발할 총알 위치값 설정
+player1_cylinder_index = sample(1:6, 1) #Player1이 격발할 실린더 위치값 설정
+player2_cylinder_index = sample(1:6, 1) #Player2가 격발할 실린더 위치값 설정
 repeat{
-  if(player1_index == bullet_index){
+  if(player1_cylinder_index == sample(1:6, 1)){
     Sys.sleep(1)
-    cat("Tang! player1 is dead.","\n",sep="")
+    cat("Tang! Player1 is dead.","\n",sep="")
     break
   }
   else{
     Sys.sleep(1)   
-    cat("Tick! player1 is alive.", "\n", sep="")
-    player1_index = sample(1:6,1)}
-  if(player2_index == bullet_index){
+    cat("Tick! Player1 is alive.", "\n", sep="")
+    }
+  if(player2_cylinder_index == sample(1:6, 1)){
     Sys.sleep(1)   
-    cat("Tang! player2 is dead.", "\n", sep="")
+    cat("Tang! Player2 is dead.","\n",sep="")
     break
   }
   else{
     Sys.sleep(1)   
-    cat("Tick! player2 is alive.", "\n", sep="")
-    player2_index = sample(1:6,1)}
+    cat("Tick! Player2 is alive.", "\n", sep="")
+    }
 }
 
 #15.3. 사용자정의 함수 function()
@@ -85,28 +84,29 @@ repeat{
 
 #(2) 예시
 russian_roulette <- function(player1, player2) {
-  bullet_index  = sample(1:6, 1) #총알의 위치값 설정
-  player1_index = sample(1:6, 1) #Player1이 격발할 총알 위치값 설정
-  player2_index = sample(1:6, 1) #Player2가 격발할 총알 위치값 설정
+  player1_cylinder_index = sample(1:6, 1) 
+  player2_cylinder_index = sample(1:6, 1)
   repeat{
-    if(player1_index == bullet_index){
+    if(player1_cylinder_index == sample(1:6, 1)){
       Sys.sleep(1)
       cat("Tang! ", player1, " is dead.", "\n", sep="")
+      return(c(player1, player1_cylinder_index))
       break
     }
     else{
       Sys.sleep(1)   
       cat("Tick! ", player1, " is alive.", "\n", sep="")
-      player1_index = sample(1:6,1)}
-    if(player2_index == bullet_index){
+      }
+    if(player2_cylinder_index == sample(1:6, 1)){
       Sys.sleep(1)   
       cat("Tang! ", player2, " is dead.", "\n", sep="")
+      return(c(player2, player2_cylinder_index))
       break
     }
     else{
       Sys.sleep(1)   
       cat("Tick! ", player2, " is alive.", "\n", sep="")
-      player2_index = sample(1:6,1)}
+      }
   }
 }
-russian_roulette("CSH","PSH")
+who_is_dead <- russian_roulette('CSH', 'PSH') 
