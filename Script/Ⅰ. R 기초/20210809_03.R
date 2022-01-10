@@ -32,10 +32,10 @@ switch(sample_01,
 
 #15.2. 반복문
 #(1) for문
-for(i in 1:10){
-  cat("count: ", abs(i-11), "\n", sep="")
+for(i in 10:1){
+  cat("count: ", i, "\n", sep="")
   Sys.sleep(1)  #action을 1초간 지연시키는 함수
-  if(i==10){cat("count: 0,", "발사!")}
+  if(i==1){cat("count: 0,", "발사!")}
 }
 
 #(2) while문
