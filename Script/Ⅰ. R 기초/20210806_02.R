@@ -33,7 +33,10 @@ array_01 <- array(c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
 array_01
 
 #(6) 리스트(List)
-list_01 <- list(vector_01 = c(1, 3, 5, 7, 9),
+list_01 <- list(scalar_01 = 8,
+                scalar_02 = "Data",
+                scalar_03 = TRUE,
+                vector_01 = c(1, 3, 5, 7, 9),
                 vector_02 = c("Data", "Analytics", "With", "R"),
                 vector_03 = c(1, 3, "a", 7, 9), 
                 vector_04 = c(1, 3, TRUE),     
