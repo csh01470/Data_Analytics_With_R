@@ -21,8 +21,8 @@ matrix_01 <- matrix(data = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
                     byrow = TRUE)
 
 #(4) 데이터프레임(Data Frame)
-student_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
-                              gender = factor(c('m', 'f', 'm', 'f', 'm')),
+student_dataset <- data.frame(name = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
+                              gender = factor(c("m", "f", "m", "f", "m")),
                               korean = c(35, 92.5, 70,85, 60),
                               math = c(65L, 80L, 88L, 67L, 28L),
                               test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
@@ -44,8 +44,8 @@ list_01 <- list(scalar_01 = 8,
                                    nrow = 3,
                                    ncol = 3,
                                    byrow = TRUE),
-                student_dataset = data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
-                                             gender = factor(c('m', 'f', 'm', 'f', 'm')),
+                student_dataset = data.frame(name = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
+                                             gender = factor(c("m", "f", "m", "f", "m")),
                                              korean = c(35, 92.5, 70,85, 60),
                                              math = c(65L, 80L, 88L, 67L, 28L),
                                              test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE)),        
