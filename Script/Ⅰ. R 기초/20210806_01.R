@@ -14,7 +14,7 @@ num_integer <- 3L
 
 #08.3. 논리(Logical)
 logical_01 <- TRUE
-logical_02 <- true
+logical_02 <- True
 
 #PLUS) 특수값
 #SKIP
