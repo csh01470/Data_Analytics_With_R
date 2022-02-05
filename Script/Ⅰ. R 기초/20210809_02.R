@@ -8,8 +8,8 @@
 
 #(2) 예시
 write.table(asset_status, 
-            file='asset_status.tsv',
-            sep='\t',
+            file="asset_status.tsv",
+            sep="\t",
             row.names = FALSE)
 
 #14.2. 데이터셋 저장, write.csv()
@@ -17,22 +17,22 @@ write.table(asset_status,
 #SKIP 
 
 #(2) 예시
-write.csv(grade_list_01,
-          file="grade_list.csv",
-          row.names=F,
+write.csv(x=student_dataset,
+          file="student_dataset.csv",
+          row.names=FALSE,
           quote=FALSE)  #"(큰따옴표) 수식 제거
 
 #14.3. 데이터셋 저장, write_xlsx()
 #(1) writexl 패키지 설치 및 활성화
-#install.packages('writexl')
+#install.packages("writexl")
 library(writexl)
 
 #(2) write_xlsx() 함수의 구조와 파라미터
 #SKIP
 
 #(3) 예시
-write_xlsx(x=grade_list_01,
-           path="grade_list.xlsx",
+write_xlsx(x=student_dataset,
+           path="student_dataset.xlsx",
            col_names=TRUE,
            format_headers=FALSE)
 
