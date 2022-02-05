@@ -17,17 +17,20 @@ vector_01 * vector_01 #곱셈
 vector_01 / vector_01 #나눗셈
 
 #(2) 벡터의 내적(Dot product, Inner Product)
-#install.packages('pracma')
-library(pracma)
-dot(vector_01, vector_01)
+vector_01 %*% vector_01
 
 #(3) 벡터의 외적(Outer Product)
-outer(vector_01, vector_01)
+vector_01 %o% vector_01
+
+#PLUS) 벡터곱(Vector Product, Cross Product)
+#install.packages("pracma")
+library("pracma")
+cross(vector_01, c(2, 3, 4))
 
 #12.3. 행렬과 스칼라 간 사칙연산
-matrix_01 <- matrix(data = 1:9,
-                    nrow = 3,
-                    byrow = TRUE)
+matrix_01 <- matrix(data=1:9,
+                    nrow=3,
+                    byrow=TRUE)
 matrix_01 + 2 #덧셈
 matrix_01 - 2 #뺄셈
 matrix_01 * 2 #곱셈
@@ -61,7 +64,7 @@ det(matrix_01)
 
 #(6) 역행렬(Inverse Matrix)
 solve(matrix_01) #WHY?
-matrix_02 <- matrix(data = c(1, 0, 1, 2, 3, 0, 1, 3, 0),
-                  nrow=3,
-                  byrow = TRUE)
+matrix_02 <- matrix(data=c(1, 0, 1, 2, 3, 0, 1, 3, 0),
+                    nrow=3,
+                    byrow=TRUE)
 solve(matrix_02)
