@@ -3,7 +3,7 @@
 
 ## CH.17 데이터셋 탐색하기
 #17.1. 데이터셋 구조 파악
-iris <- datasets::iris
+iris <- read.csv(file="data/iris.csv")
 
 #(1) str()
 str(iris)
