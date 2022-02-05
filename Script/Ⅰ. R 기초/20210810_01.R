@@ -41,9 +41,21 @@ russian_roulette <- function(player1, player2) {
 #MEMO. 인자는 직접 정의해야함.
 
 #16.4. 파일 입력, 출력에 대한 논의
-example_data <- read.csv('a:/R_project/Data_Analytics_With_R/Data/sampling_data_set.csv')
-example_data <- read.csv('Data/sampling_data_set.csv')
+#(1) 절대경로, 상대경로의 정의
+example_data <- read.csv("a:/R_project/Data_Analytics_With_R/Data/sampling_data_set.csv")
+example_data <- read.csv("Data/sampling_data_set.csv")
+
+#(2) TAB키를 사용한 경로 지정
+#SKIP
+
+#(3) GUI를 통한 파일 지정
 example_data <- read.csv(file.choose())
+
+#(4) 워킹디렉토리 확인
+getwd()
+
+#(5) 워킹디렉토리 재지정
+setwd("D:/R_project/TIL_R")
 
 #16.5. 동적 변수 할당
 #SKIP
