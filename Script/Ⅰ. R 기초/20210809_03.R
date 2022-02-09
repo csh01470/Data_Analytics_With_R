@@ -82,7 +82,15 @@ repeat{
 #(1) 함수의 구조
 #SKIP
 
-#(2) 예시
+#(2) 예시 
+stats_mode <- function(X){
+  TABLE_X <- table(X)
+  names(which.max(TABLE_X))
+}
+vector_02 <- c("A", "A", "A", "B", "C", "C", "D", "D", "E")
+stats_mode(vector_02)
+
+#(3) 심화예시
 russian_roulette <- function(player1, player2) {
   player1_cylinder_index = sample(1:6, 1) 
   player2_cylinder_index = sample(1:6, 1)
@@ -109,4 +117,4 @@ russian_roulette <- function(player1, player2) {
       }
   }
 }
-who_is_dead <- russian_roulette('CSH', 'PSH') 
+who_is_dead <- russian_roulette("CSH", "PSH") 
