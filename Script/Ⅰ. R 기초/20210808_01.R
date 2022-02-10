@@ -18,11 +18,11 @@ mean(vector_01)
 median(vector_01)
 
 #(5) 분위수 함수, table()
-vector_02 <- c("A", "A", "B", "C", "C", "D", "D", "E")
+vector_02 <- c("A", "A", "A", "B", "C", "C", "D", "D", "E")
 table(vector_02)
 
 #PLUS) 최빈값 함수
-names(which(table(vector_02) == max(table(vector_02))))
+names(which.max(table(vector_02)))
 
 #(6) 분산 함수, var()
 var(vector_01)
