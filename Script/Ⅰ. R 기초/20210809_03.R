@@ -85,9 +85,9 @@ repeat{
 #(2) 예시 
 stats_mode <- function(X){
   TABLE_X <- table(X)
-  names(which.max(TABLE_X))
+  return(names(which.max(TABLE_X)))
 }
-vector_02 <- c("A", "A", "A", "B", "C", "C", "D", "D", "E")
+vector_02 <- c("A", "A", "A", "B", "C", "C")
 stats_mode(vector_02)
 
 #(3) 심화예시
