@@ -2,16 +2,29 @@
 #Data_Analytics_With_R
 
 ## CH.25 기타 전처리 함수 파악하기
-#25.1. 그룹핑 함수, aggregate()
+#25.1. 인덱싱 함수, which()
+#(1) which() 함수의 구조
+#SKIP
+
+#(2) 예시
+vector_01 <- c(1, 4, 2, 3, 5)
+which(vector_01==4)
+
+#(3) arr.ind 파라미터를 활용한 예시
+matrix_01 <- matrix(data = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+                    nrow = 3,
+                    ncol = 3,
+                    byrow = TRUE)
+which(matrix_01==7)
+which(matrix_01==7, arr.ind=TRUE)
+
+#25.2. 그룹핑 함수, aggregate()
 #(1) aggregate() 함수의 구조
 #SKIP
 
 #(2) 예시 
-student_dataset <- read.csv('a:/R_project/Data_Analytics_With_R/Data/student_dataset.csv')
+student_dataset <- read.csv("Data/student_dataset.csv")
 aggregate(korean~class_num, student_dataset, mean)
-
-#25.2. 빈도 함수, table()
-table(student_dataset$gender)
 
 #25.3. 정렬 함수, sort()∙order()
 #(1) 값 정렬 함수, sort()
@@ -31,4 +44,5 @@ student_dataset[order(student_dataset$math, decreasing = TRUE), ]
 #SKIP
 
 #(3) 예시
-?apply()
+apply(X=matrix_01, MARGIN=1, FUN=sum)
+apply(X=matrix_01, MARGIN=2, FUN=sum) 
