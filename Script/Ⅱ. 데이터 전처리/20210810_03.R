@@ -3,11 +3,8 @@
 
 ## CH.18 데이터셋 유형과 구조 판별하기
 #18.1. is() 함수로 데이터셋 유형 판별하기
-student_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
-                              gender = factor(c('m', 'f', 'm', 'f', 'm')),
-                              korean = c(35, 92.5, 70,85, 60),
-                              math = c(65L, 80L, 88L, 67L, 28L),
-                              test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
+student_dataset <- read.csv(file="data/student_dataset.csv",
+                            header=TRUE)
                               
 #(1) is.character()
 is.character(student_dataset$name)
@@ -28,7 +25,7 @@ is.factor(student_dataset$gender)
 
 #18.2. is() 함수로 데이터셋 구조 판별하기
 #(1) is.atomic()
-is.atomic('Data_Analytics_With_R')
+is.atomic("Data_Analytics_With_R")
 
 #(2) is.vector()
 is.vector(student_dataset$name)
