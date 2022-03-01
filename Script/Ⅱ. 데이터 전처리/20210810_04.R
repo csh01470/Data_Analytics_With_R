@@ -3,11 +3,8 @@
 
 ## CH.19 데이터셋 유형과 구조 변환하기
 #19.1. as() 함수로 데이터셋 유형 변경하기
-student_dataset <- data.frame(name = c('PSH', 'CGE', 'CSH', 'CMJ', 'CJH'),
-                              gender = factor(c('m', 'f', 'm', 'f', 'm')),
-                              korean = c(35, 92.5, 70, 85, 60),
-                              math = c(65L, 80L, 88L, 67L, 28L),
-                              test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
+student_dataset <- read.csv(file="data/student_dataset.csv",
+                            header=TRUE)
 
 #(1) as.character()
 as.character(student_dataset$korean)
@@ -30,7 +27,7 @@ as.factor(student_dataset$name)
 student_dataset$korean <- as.character(student_dataset$korean)
 
 #19.3. as() 함수로 데이터셋 구조 변경하기
-matrix_01 <- matrix(data = c(1,2,3,4,5,6,7,8,9),
+matrix_01 <- matrix(data = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
                     nrow = 3,
                     byrow = TRUE)
 
@@ -46,6 +43,7 @@ as.data.frame(matrix_01)
 #(4) as.array()
 as.array(student_dataset)
 as.array(matrix_01)
+
 #(5) as.list()
 as.list(student_dataset)
 as.list(matrix_01)
