@@ -1,20 +1,26 @@
 #2021.08.08. SUN
 #Data_Analytics_With_R
 
-## CH.12 벡터, 행렬의 기본 연산 이해하기
-#12.1. 벡터와 스칼라 간 사칙연산
-vector_01 <- c(1, 2, 3)
-vector_01 + 2 #덧셈
-vector_01 - 2 #뺄셈
-vector_01 * 2 #곱셈
-vector_01 / 2 #나눗셈
+## CH.13 벡터, 행렬의 기본 연산 이해하기
+#13.1. 재사용규칙(Recycling Rule)
+x_vector <- c(1, 2, 3) 
+y_vector <- c(1, 2, 3, 4, 5)
+x_vector + y_vector
 
-#12.2. 벡터와 벡터 간 연산
+#13.2. 벡터와 스칼라 간 사칙연산
+vector_01 <- c(1, 2, 3)
+vector_01 + 2   #덧셈
+vector_01 - 2   #뺄셈
+vector_01 * 2   #곱셈
+vector_01 / 2   #나눗셈
+
+
+#13.3. 벡터와 벡터 간 연산
 #(1) 벡터와 벡터간 사칙연산
-vector_01 + vector_01 #덧셈
-vector_01 - vector_01 #뺄셈
-vector_01 * vector_01 #곱셈
-vector_01 / vector_01 #나눗셈
+vector_01 + vector_01   #덧셈
+vector_01 - vector_01   #뺄셈
+vector_01 * vector_01   #곱셈
+vector_01 / vector_01   #나눗셈
 
 #(2) 벡터의 내적(Dot product, Inner Product)
 vector_01 %*% vector_01
@@ -27,7 +33,7 @@ vector_01 %o% vector_01
 library("pracma")
 cross(vector_01, c(2, 3, 4))
 
-#12.3. 행렬과 스칼라 간 사칙연산
+#13.3. 행렬과 스칼라 간 사칙연산
 matrix_01 <- matrix(data=1:9,
                     nrow=3,
                     byrow=TRUE)
@@ -36,13 +42,13 @@ matrix_01 - 2 #뺄셈
 matrix_01 * 2 #곱셈
 matrix_01 / 2 #나눗셈
 
-#12.4. 행렬과 벡터 간 사칙연산
+#13.4. 행렬과 벡터 간 사칙연산
 matrix_01 + vector_01 #덧셈
 matrix_01 - vector_01 #뺄셈
 matrix_01 * vector_01 #곱셈
 matrix_01 / vector_01 #나눗셈
 
-#12.5. 행렬과 행렬 간 연산
+#13.5. 행렬과 행렬 간 연산
 #(1) 행렬과 행렬 간 사칙연산
 matrix_01 + matrix_01 #덧셈
 matrix_01 - matrix_01 #뺄셈
