@@ -30,8 +30,7 @@ vector_01 %o% vector_01
 
 #PLUS) 벡터곱(Vector Product, Cross Product)
 #install.packages("pracma")
-library("pracma")
-cross(vector_01, c(2, 3, 4))
+pracma::cross(vector_01, c(2, 3, 4))
 
 #13.3. 행렬과 스칼라 간 사칙연산
 matrix_01 <- matrix(data=1:9,
