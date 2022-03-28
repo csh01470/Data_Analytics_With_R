@@ -5,7 +5,7 @@
 #09.1 문자(Character)
 #(1) 문자형 데이터의 정의
 #SKIP
- 
+
 #(2) 예시
 chr_01 <- "Data Analytics With R"
 

@@ -1,7 +1,7 @@
 #2021.08.09. MON
 #Data_Analytics_With_R
 
-## CH.14 내부 데이터 저장하기
+## CH.15 내부 데이터 저장하기
 #14.1. 데이터셋 저장, write.table() 
 #(1) write.table() 함수의 구조와 파라미터
 #SKIP

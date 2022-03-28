@@ -1,7 +1,7 @@
 #2021.08.09. MON
 #Data_Analytics_With_R
 
-## CH.13 외부 데이터 불러오기
+## CH.14 외부 데이터 불러오기
 #13.1. 데이터셋 불러오기, read.table()
 #(1) read.table() 함수의 구조와 파라미터
 #SKIP
