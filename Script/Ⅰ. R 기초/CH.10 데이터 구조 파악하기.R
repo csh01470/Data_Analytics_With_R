@@ -53,8 +53,7 @@ student_dataset <- data.frame(name = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
                               korean = c(35, 92.5, 70,85, 60),
                               math = c(65L, 80L, 88L, 67L, 28L),
                               test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
-
-
+student_dataset
 
 #10.5. 배열(Array, 어레이)
 #(1) 배열의 정의
