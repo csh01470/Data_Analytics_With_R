@@ -2,7 +2,7 @@
 # TITLE        :: CH10. 데이터 구조 파악하기 
 # AUTHOR       :: DATA_ANALYTICS_WITH_R, CHOE SANG HEON
 # CREATED DATE :: 2021-08-06 (FRI)
-# UPDATED DATE :: 2022-05-08 (SUN)
+# UPDATED DATE :: 2022-05-09 (MON)
 
 ################################################################################
 #10.1. 스칼라(Scalar), 원자(atom)\
@@ -50,10 +50,10 @@ View(matrix_01)
 #SKIP
 
 #(3) 예시
-student_dataset <- data.frame(name = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
-                              gender = factor(c("m", "f", "m", "f", "m")),
-                              korean = c(35, 92.5, 70,85, 60),
-                              math = c(65L, 80L, 88L, 67L, 28L),
+student_dataset <- data.frame(name      = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
+                              gender    = factor(c("m", "f", "m", "f", "m")),
+                              korean    = c(35, 92.5, 70,85, 60),
+                              math      = c(65L, 80L, 88L, 67L, 28L),
                               test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
 
 #(4) 내부 참조 $의 논의
@@ -69,7 +69,7 @@ student_dataset$name
 
 #(3) 예시
 array_01 <- array(c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
-                  dim = c(2, 3, 2))
+                  dim=c(2, 3, 2))
 array_01
 
 ################################################################################
@@ -81,24 +81,24 @@ array_01
 #SKIP
 
 #(3) 예시
-list_01 <- list(scalar_01 = 8,
-                scalar_02 = "Data",
-                scalar_03 = TRUE,
-                vector_01 = c(1, 3, 5, 7, 9),
-                vector_02 = c("Data", "Analytics", "With", "R"),
-                vector_03 = c(1, 3, "a", 7, 9), 
-                vector_04 = c(1, 3, TRUE),     
-                matrix_01 = matrix(data = c(1, 2, 3, 4, 5, 6, 7, 8, 9),
-                                   nrow = 3,
-                                   ncol = 3,
-                                   byrow = TRUE),
-                student_dataset = data.frame(name = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
-                                             gender = factor(c("m", "f", "m", "f", "m")),
-                                             korean = c(35, 92.5, 70,85, 60),
-                                             math = c(65L, 80L, 88L, 67L, 28L),
-                                             test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE)),        
-                array_01 = array(c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
-                                 dim = c(2, 3, 2)))
+list_01 <- list(scalar_01=8,
+                scalar_02="Data",
+                scalar_03=TRUE,
+                vector_01=c(1, 3, 5, 7, 9),
+                vector_02=c("Data", "Analytics", "With", "R"),
+                vector_03=c(1, 3, "a", 7, 9), 
+                vector_04=c(1, 3, TRUE),     
+                matrix_01=matrix(data=c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+                                   nrow=3,
+                                   ncol=3,
+                                   byrow=TRUE),
+                student_dataset=data.frame(name      = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
+                                           gender    = factor(c("m", "f", "m", "f", "m")),
+                                           korean    = c(35, 92.5, 70,85, 60),
+                                           math      = c(65L, 80L, 88L, 67L, 28L),
+                                           test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE)),      
+                array_01=array(c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
+                               dim=c(2, 3, 2)))
 list_01
 
 ################################################################################
