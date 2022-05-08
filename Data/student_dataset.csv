@@ -1,6 +1,6 @@
-"name","gender","korean","math","test_pass"
-"PSH","m",35,65,FALSE
-"CGE","f",92.5,80,TRUE
-"CSH","m",70,88,TRUE
-"CMJ","f",85,67,TRUE
-"CJH","m",60,28,FALSE
+name,gender,korean,math,test_pass
+PSH,m,35,65,FALSE
+CGE,f,92.5,80,TRUE
+CSH,m,70,88,TRUE
+CMJ,f,85,67,TRUE
+CJH,m,60,28,FALSE
