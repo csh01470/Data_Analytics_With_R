@@ -5,42 +5,49 @@
 # UPDATED DATE :: 2022-05-10 (TUE)
 
 ################################################################################
-#16.1. 조건문
-#(1) if문
+#16.1. 조건문(Conditional statements)
+#(1) 조건문의 이해
 #SKIP
 
-#(2) else if문
+#(2) if문
 #SKIP
 
-#(3) else문
+#(3) else if문
 #SKIP
 
-#(4) 예시
-SCORE <- 80
-if(SCORE >= 85){
-  print("GRADE : A")
-} else if(SCORE >= 75){
-  print("GRADE : B")
-} else if(SCORE >= 65){
-  print("GRADE : C")
+#(4) else문
+#SKIP
+
+#(5) 예시
+MATH_SCORE <- 80
+if(MATH_SCORE >= 85){
+  MATH_GRADE <- A
+  cat("GRADE : A")
+} else if(MATH_SCORE >= 75){
+  cat("GRADE : B")
+} else if(MATH_SCORE >= 65){
+  cat("GRADE : C")
 } else{
-  print("GRADE : D")
+  cat("GRADE : D")
 }
 
 ################################################################################
-#16.2. 반복문
-#(1) for문
+#16.2. 반복문(Iteration Statement; Loop Statement)
+#(1) 반복문의 정의
+#SKIP
+
+#(2) for문
 for(i in 10:1){
   cat("count: ", i, "\n", sep="")
   Sys.sleep(time=1)  #코드 실행을 1초간 지연시키는 함수
   if(i==1){cat("count: 0,", "Launch!")}
 }
 
-#(2) while문
+#(3) while문
 tanker_HP     <- 100             #탱커의 체력 설정
 attack_damage <- sample(0:30, 1) #몬스터의 공격력 설정
 while(tanker_HP>0){
-  Sys.sleep(1)
+  Sys.sleep(time=1)
   if(tanker_HP <= attack_damage){
     cat("Tanker is dead.")
     break
@@ -52,7 +59,7 @@ while(tanker_HP>0){
   }
 }
 
-#(3) repeat문
+#(4) repeat문
 repeat{
   player1_index_bullet = sample(x=1:6, size=1)  #player1의 총알 인덱스 설정
   player2_index_bullet = sample(x=1:6, size=1)  #player2의 총알 인덱스 설정
@@ -85,11 +92,25 @@ repeat{
 }
 
 ################################################################################
-#16.3. 분기문
-#(1) break문
+#16.3. 분기문(Branch Statement ; Jump Statement)
+#(1) 분기문의 정의
 #SKIP
 
-#(2) next문
+#(2) break문
 #SKIP
+
+#(3) next문
+#SKIP
+
+#(4) 예시
+for(i in 1:20){
+  if(i %% 2 == 0){
+    next
+  }
+  if(i == 15){
+    break
+  }
+  print(i)
+}
 
 ################################################################################
