@@ -1,67 +1,64 @@
-#2021.08.10. TUE
-#Data_Analytics_With_R
+################################################################################
+# TITLE        :: CH17. 사용자정의함수 파악하기
+# AUTHOR       :: DATA_ANALYTICS_WITH_R, CHOE SANG HEON
+# CREATED DATE :: 2021-08-10 (TUE)
+# UPDATED DATE :: 2022-07-15 (FRI)
 
-## CH.17 R 사용 편의 기능 및 함수 파악하기
-#16.1. 단축키 및 사용자 환경 편의 기능
+################################################################################
+#17.1. 사용자정의함수(User-Defined Function)
+#(1) 사용자정의함수의 구조
 #SKIP
 
-#16.2. 지수표기법과 일반표기법
-#(1) 지수표기법을 일반표기법으로 변환하기. 
-options(scipen=100)
+#(2) 사용자정의함수의 작동 프로세스
+#SKIP
 
-#(2) 일반표기법을 지수표기법으로 변환하기.
-options(scipen=-100)
-
-#16.3. 함수 단축 정의 
-russian_roulette <- function(player1, player2) {
-  bullet_index  = sample(1:6, 1) #총알의 위치값 설정
-  player1_index = sample(1:6, 1) #Player1이 격발할 총알 위치값 설정
-  player2_index = sample(1:6, 1) #Player2가 격발할 총알 위치값 설정
-  repeat{
-    if(player1_index == bullet_index){
-      Sys.sleep(1)
-      cat("Tick! ", player1, " is dead.", "\n", sep="")
-      break
-    }
-    else{
-      Sys.sleep(1)   
-      cat("Tick! ", player1, " is alive.", "\n", sep="")
-      player1_index = sample(1:6,1)}
-    if(player2_index == bullet_index){
-      Sys.sleep(1)   
-      cat("Tick! ", player2, " is dead.", "\n", sep="")
-      break
-    }
-    else{
-      Sys.sleep(1)   
-      cat("Tick! ", player2, " is alive.", "\n", sep="")
-      player2_index = sample(1:6,1)}
-  }
+#(3) 예시 
+stats_mode <- function(X){
+  TABLE_X <- table(X)
+  MODE_X <- names(which.max(TABLE_X)) 
+  return(MODE_X)
 }
-#MEMO. 인자는 직접 정의해야함.
+vector_02 <- c("A", "A", "A", "B", "C", "C")
+stats_mode(vector_02)
 
-#16.4. 파일 입력, 출력에 대한 논의
-#(1) 절대경로, 상대경로의 정의
-example_data <- read.csv("a:/R_project/Data_Analytics_With_R/Data/sampling_data_set.csv")
-example_data <- read.csv("Data/sampling_data_set.csv")
-
-#(2) TAB키를 사용한 경로 지정
+################################################################################
+#17.2. 변수 스코프(Variable Scope)
+#(1) 변수 스코프의 정의
 #SKIP
 
-#(3) GUI를 통한 파일 지정
-example_data <- read.csv(file.choose())
+#(2) 지역 변수(Local Variable)
+UDF_01 <- function(){
+  scalar_01 <- "Data Analytics With R"
+}
+UDF_01()
 
-#(4) 워킹디렉토리 확인
-getwd()
+#(3) 전역 변수(Global Variable)
+UDF_02 <- function(){
+  scalar_02 <<- "Data Analytics With R"
+}
+UDF_02()
 
-#(5) 워킹디렉토리 재지정
-setwd("D:/R_project/TIL_R")
+################################################################################
+#17.3. 파라미터 유형에 따른 함수 처리
+#(1) 일반 파라미터(standard parameter)
+get_add_01 <- function(number_01, number_02){
+  return_value <- number_01 + number_02
+  return(return_value)
+}
+get_add_01(number_01=8, number_02=25)
 
-#16.5. 동적 변수 할당
-#SKIP
+#(2) 디폴트 파라미터(default parameter)
+get_add_02 <- function(number_01, number_02=3){
+  return_value <- number_01 + number_02
+  return(return_value)
+}
+get_add_02(number_01=2)
 
-#16.6. 마크다운(Mark Down)
-#SKIP
+#(3) 가변 파라미터(variadic parameter)
+get_add_03 <- function(...){
+  return_value <- sum(...)
+  return(return_value)
+}
+get_add_03(1, 3, 5, 7, 9)
 
-#16.7. 치트시트(Cheet Sheet)
-#SKIP
+################################################################################
