@@ -21,7 +21,7 @@ write.table(asset_status,
 #SKIP 
 
 #(2) 예시
-write.csv(x=student_dataset,
+write.csv(x=student_df,
           file="student_dataset.csv",
           row.names=FALSE,
           quote=FALSE)  #"(큰따옴표) 수식 제거
@@ -36,7 +36,7 @@ library(writexl)
 #SKIP
 
 #(3) 예시
-write_xlsx(x=student_dataset,
+write_xlsx(x=student_df,
            path="student_dataset.xlsx",
            col_names=TRUE,
            format_headers=FALSE)

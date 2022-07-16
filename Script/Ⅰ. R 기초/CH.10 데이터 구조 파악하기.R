@@ -50,14 +50,11 @@ View(matrix_01)
 #SKIP
 
 #(3) 예시
-student_dataset <- data.frame(name      = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
-                              gender    = factor(c("m", "f", "m", "f", "m")),
-                              korean    = c(35, 92.5, 70,85, 60),
-                              math      = c(65L, 80L, 88L, 67L, 28L),
-                              test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
-
-#(4) 내부 참조 $의 논의
-student_dataset$name
+student_df <- data.frame(name      = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
+                         gender    = factor(c("m", "f", "m", "f", "m")),
+                         korean    = c(35, 92.5, 70,85, 60),
+                         math      = c(65L, 80L, 88L, 67L, 28L),
+                         test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE))
 
 ################################################################################
 #10.5. 배열(Array, 어레이)
@@ -92,11 +89,11 @@ list_01 <- list(scalar_01=8,
                                    nrow=3,
                                    ncol=3,
                                    byrow=TRUE),
-                student_dataset=data.frame(name      = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
-                                           gender    = factor(c("m", "f", "m", "f", "m")),
-                                           korean    = c(35, 92.5, 70,85, 60),
-                                           math      = c(65L, 80L, 88L, 67L, 28L),
-                                           test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE)),      
+                student_df=data.frame(name      = c("PSH", "CGE", "CSH", "CMJ", "CJH"),
+                                      gender    = factor(c("m", "f", "m", "f", "m")),
+                                      korean    = c(35, 92.5, 70,85, 60),
+                                      math      = c(65L, 80L, 88L, 67L, 28L),
+                                      test_pass = c(FALSE, TRUE, TRUE, TRUE, FALSE)), 
                 array_01=array(c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
                                dim=c(2, 3, 2)))
 list_01

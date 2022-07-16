@@ -20,8 +20,8 @@ asset_status <- read.table(file="data/asset_status.tsv",
 #SKIP
 
 #(2) 예시
-student_dataset_01 <- read.csv(file="data/student_dataset.csv",
-                               header=TRUE)
+student_df_01 <- read.csv(file="data/student_dataset.csv",
+                          header=TRUE)
 
 ################################################################################
 #13.3. xlsx 형식 데이터셋 불러오기, read_xlsx()
@@ -33,9 +33,9 @@ library(readxl)
 #SKIP
 
 #(3) 예시
-student_dataset_02 <- read_xlsx(path="data/student_dataset.xlsx",
-                                sheet=1,
-                                col_names=TRUE)
+student_df_02 <- read_xlsx(path="data/student_dataset.xlsx",
+                           sheet=1,
+                           col_names=TRUE)
 
 ################################################################################
 #13.4. sav 형식 데이터셋 불러오기, read.spss()
